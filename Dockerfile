@@ -24,10 +24,10 @@ WORKDIR /var/www/html
 RUN ln -sf /dev/stdout /var/log/apache2/access.log \
   && ln -sf /dev/stdout /var/log/apache2/error.log \
   && chown -R www-data:www-data /var/log/apache2 /var/www/html \
-  && wget https://github.com/phppgadmin/phppgadmin/archive/master.zip \
-  && rm /var/www/html/index.html && unzip /var/www/html/master.zip \
-  && cp -R phppgadmin-master/* . && rm -r phppgadmin-master \
-  && rm /var/www/html/master.zip \
+  && wget https://github.com/phppgadmin/phppgadmin/archive/REL_5-6-0.zip \
+  && rm /var/www/html/index.html && unzip /var/www/html/REL_5-6-0.zip \
+  && cp -R phppgadmin-REL_5-6-0/* . && rm -r phppgadmin-master \
+  && rm /var/www/html/REL_5-6-0.zip \
   && rm -rf /var/lib/apt/lists/*
 
 ADD config.inc.php /var/www/html/conf/config.inc.php
