@@ -26,7 +26,7 @@ RUN ln -sf /dev/stdout /var/log/apache2/access.log \
   && chown -R www-data:www-data /var/log/apache2 /var/www/html \
   && wget https://github.com/phppgadmin/phppgadmin/archive/REL_5-6-0.zip \
   && rm /var/www/html/index.html && unzip /var/www/html/REL_5-6-0.zip \
-  && cp -R phppgadmin-REL_5-6-0/* . && rm -r phppgadmin-master \
+  && cp -R phppgadmin-REL_5-6-0/* . && rm -r phppgadmin-REL_5-6-0 \
   && rm /var/www/html/REL_5-6-0.zip \
   && rm -rf /var/lib/apt/lists/*
 
